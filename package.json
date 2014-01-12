@@ -1,0 +1,21 @@
+{
+  "name": "oj-typeahead",
+  "version": "0.0.1",
+  "main": "oj.Typeahead.js",
+  "description": "A Twitter Typeahead.js plugin for OJ",
+  "homepage": "http://ojjs.org/plugins.html#Typehead",
+  "keywords": [
+    "oj",
+    "plugin",
+    "form",
+    "typeahead.js",
+    "typeahead",
+    "autocomplete",
+    "suggestion"
+  ],
+  "author": "Evan Moran <evan@evanmoran.com>",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ojjs/oj.Typeahead.git"
+  }
+}

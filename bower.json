@@ -1,0 +1,28 @@
+{
+  "name": "oj-typeahead",
+  "version": "0.0.1",
+  "main": "oj.Typeahead.js",
+  "homepage": "http://ojjs.org/plugins.html#Typeahead",
+  "authors": [
+    "Evan Moran <evan@evanmoran.com>"
+  ],
+  "description": "Typeahead plugin for OJ",
+  "keywords": [
+    "oj",
+    "plugin",
+    "form",
+    "typeahead.js",
+    "typeahead",
+    "autocomplete",
+    "suggestion"
+  ],
+  "license": "MIT",
+  "ignore": [
+    ".DS_Store",
+    ".git",
+    ".gitignore",
+    "bower_components",
+    "package.json",
+    "node_modules"
+  ]
+}
