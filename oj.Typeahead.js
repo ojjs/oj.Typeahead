@@ -1741,6 +1741,9 @@
           },
           change: function(){_t.viewChanged()}
         })
+
+        if(_t.model)
+          _t.modelChanged()
       },
       properties: {
 
@@ -1784,7 +1787,12 @@
         suggestion: {get: function(){return this._suggestion}},
         empty: {get: function(){return this._empty}},
 
-        '$input': {get: function(){return this.$('.oj-Typeahead-input')}}
+        '$input': {get: function(){
+          if(this.$el.get(0).tagName === 'INPUT')
+            return this.$el;
+          else
+            return this.$('.oj-Typeahead-input')}
+        }
       },
       methods: {
 
@@ -1937,7 +1945,6 @@
         '-webkit-background-clip': 'padding-box',
            '-moz-background-clip': 'padding',
                 'background-clip': 'padding-box'
-        // width:'100%'
       },
 
       '.tt-suggestion':{
@@ -1962,16 +1969,6 @@
         }
       }
     })
-
-    // Remove all classes with the prefix
-    function _removeClassPrefix($el, prefix){
-      var classes = _getClasses($el), ix = 0, cls;
-      for (;ix < classes.length; ix++) {
-        cls = classes[ix];
-        if(cls.indexOf(prefix) == 0)
-          $el.removeClass(cls)
-      }
-    }
 
     return {Typeahead:Typeahead};
   };
