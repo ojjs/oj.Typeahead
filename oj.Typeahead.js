@@ -12,7 +12,8 @@
 (function($) {
     var _ = {
         isMsie: function() {
-            return /(msie|trident)/i.test(navigator.userAgent) ? navigator.userAgent.match(/(msie |rv:)(\d+(.\d+)?)/i)[2] : false;
+          var nav = typeof navigator == 'undefined' ? {} : navigator;
+            return /(msie|trident)/i.test(nav.userAgent) ? nav.userAgent.match(/(msie |rv:)(\d+(.\d+)?)/i)[2] : false;
         },
         isBlankString: function(str) {
             return !str || /^\s*$/.test(str);
@@ -1663,7 +1664,7 @@
             return source;
         }
     })();
-})(window.jQuery);
+})(window.jQuery || $, {});
 
 // oj.Typeahead plugin
 
@@ -1679,6 +1680,7 @@
   var plugin = function(oj,settings){
     if (typeof settings !== 'object')
       settings = {}
+
 
     var Typeahead = oj.createType('Typeahead', {
 
